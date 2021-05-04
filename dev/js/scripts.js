@@ -8,6 +8,7 @@ import { liftOffTL } from "./liftOff"
 import { flightTL } from "./flightPath"
 import { moonZoomInTL } from "./moonZoom"
 import { landingTL } from "./landing"
+import { endingTL } from "./ending"
 
 gsap.registerPlugin(GSDevTools);
 
@@ -21,10 +22,12 @@ mainTL.add(fadeInTL)
         .add(flightTL ,"zoomFlight")
         .add(moonZoomInTL,"zoomFlight")
  
-        .add(landingTL);
+        // .addLabel("marker")
+        .add(landingTL)
+        .add(endingTL)
 
+        // mainTL.play("marker");
 
-        // mainTL.play();
 
 
 // console.log(numberThing);
